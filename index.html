@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <img src="/img/mi_mor.jpg" alt="">
+        <img src="/img/mi_mor3.jpg" alt="">
+        <img src="/img/mi_mor4.jpg" alt="">
+        <img src="/img/mi_mor6.jpg" alt="">
+    </div>
+
+    <div class="main">
+        <h1><span>❤</span>FELIZ ANIVERSARIO MI AMOR<span>❤</span></h1>
+
+        <button id="confetti">Click aqui!!</button>
+    </div>
+
+    <div class="modal">
+        <div class="modalContent">
+            <p class="close">X</p>
+            <h2>Para mi amorcito Lindo...</h2>
+            <p>Es impresionante ver cómo pasa el tiempo. Solo basta con mirar hacia atrás y ver todo lo que hemos logrado juntos, todo lo que hemos vivido y aprendido el uno del otro, la felicidad que ha llegado a nuestros corazones a causa de ese amor abrazador que llena nuestras almas. Gracias, en serio, gracias por haberte cruzado en mi camino y darle sentido a ese destino incierto, llenándolo de propósitos, metas y sueños por los que luchar. Este es nuestro primer aniversario, el cual quedará marcado en nuestras vidas para siempre. Esto es un logro del cual estoy muy orgulloso, porque tengo a la mujer más hermosa del mundo, a la mujer más tierna, sincera e inteligente con quien he podido forjar una relación sana, sincera y llena de pasiones donde prima el respeto y se anula la perversión. Y, por último, nunca lo olvides, amor, seguiré enamorándome cada día más de ti. <span class="modalParrafo">FELIZ ANIVERSARIO AMOR DE MI VIDA</span>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+    <script>
+        const jsConfetti =  new JSConfetti()
+        
+        const btn = document.querySelector("#confetti")
+
+        btn.addEventListener("click", ()=>{
+            jsConfetti.addConfetti({
+                emojis: ["💕","😍","🎉","💖"]
+            })
+        })
+
+        const btnConfetti = document.getElementById("confetti") 
+        const modal = document.querySelector(".modal")
+        const close = document.querySelector(".close")
+
+        btnConfetti.addEventListener("click",e=>{
+            e.preventDefault()
+
+            modal.style.display = "block"
+        })
+
+        
+        close.addEventListener("click",e=>{
+            e.preventDefault()
+
+            modal.style.display = "none"
+        })
+    </script>
+</body>
+</html>

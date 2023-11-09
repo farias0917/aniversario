@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff7f7;
+    font-family: Agbalumo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.contenedor{
+    background-color: rgb(236, 222, 222);
+    width: 100%;
+    padding: 20px 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contenedor img{
+    width: 150px;
+    border-radius: 10px;
+    transition: transform .5s ease;
+}
+
+.contenedor img:hover{
+    transform: scale(1.1) rotate(-15deg);
+}
+
+span{
+    color: #eb347d;
+    font-size: 60px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+button{
+    margin-top: 10px;
+    border: none;
+    background-color: #eb347d;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{ 
+    background-color: #eb347d;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.64);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+
+.modal .modalContent{
+    background-color: white;
+    padding: 10px 15px;
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 90px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    overflow: auto;
+    position: relative;
+    animation: modalAnimate .5s ease-in-out;
+}
+
+@keyframes modalAnimate{
+    0%{
+        opacity: 0;
+        transform: translatey(-100px) scale(.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0) scale(1);
+    }
+}
+
+.modal .modalContent .close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.modal .modalContent .close:hover{
+    color: red;
+}
+
+.modal .modalContent p{
+    font-weight: 100;
+}
+
+.modalParrafo{
+    color: #eb347d;
+    font-size: 50px;
+    display: block;
+}
+
+@media (max-width:823px) {
+    h1{
+        font-size: 30px;
+    } 
+    
+    span{
+        color: #eb347d;
+        font-size: 40px;
+    }
+
+    .contenedor img{
+        width: 120px;
+    }
+}
+
+@media (max-width:530px) {
+    h1{
+        font-size: 20px;
+    }  
+    
+    span{
+        color: #eb347d;
+        font-size: 30px;
+    }
+    
+    .contenedor img{
+        width: 100px;
+    }
+}
+
+
+@media (max-width:460px) {
+    h1{
+        font-size: 20px;
+    }  
+    
+    span{
+        color: #eb347d;
+        font-size: 30px;
+    }
+    
+    .contenedor img{
+        width: 80px;
+    }
+}
+
+
+
+@media (max-width:270px) {
+    .contenedor{
+        background-color: rgb(236, 222, 222);
+        width: 100%;
+        padding: 20px 0;
+        top: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 90px;
+    }
+    
+    .contenedor img{
+        width: 80%;
+        border-radius: 10px;
+        transition: transform .5s ease;
+    }
+
+    .main{
+        position: fixed;
+        background-color: white;
+        top: 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .main h1{
+        font-size: 16px;
+    }
+
+    .main span{
+        font-size: 20px;
+    }
+
+    .modal .modalContent{
+        width: 90%;
+        text-align: center;
+    }
+
+    .modalParrafo{
+        font-size: 30px;
+    }
+}
+
+
